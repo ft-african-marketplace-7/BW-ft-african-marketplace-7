@@ -58,7 +58,7 @@ function buildToken(user) {
   return jwt.sign(payload, JWT_SECRET, config);
 }
 
-router.use((err, req, res, next) => {
+router.use((err, req, res, next) => /*eslint-disable-line*/ {
   res.status(500).json({ message: "router is not working correctly" });
 });
 

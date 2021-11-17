@@ -10,6 +10,8 @@ exports.up = async (knex) => {
       items.increments("item_id");
       items.string("name", 200).notNullable();
       items.string("description", 200).notNullable();
+      items.string("location", 200).notNullable();
+      items.string("category", 200).notNullable();
       items.integer("price", 200).notNullable();
     });
 };
